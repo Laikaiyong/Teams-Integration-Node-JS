@@ -41,7 +41,7 @@ export default class TeamsService extends Service {
       const loginRequest = {
         scopes: ['User.Read', 'Calendars.ReadWrite'],
       };
-      const loginResponse = this.msalInstance.loginPopup(loginRequest);
+      const loginResponse = await this.msalInstance.loginPopup(loginRequest);
       console.log('Login response:', loginResponse);
 
       const authProvider = new AuthCodeMSALBrowserAuthenticationProvider(
@@ -56,7 +56,7 @@ export default class TeamsService extends Service {
       const client = Client.initWithMiddleware({ authProvider });
       console.log('Client initialized:', client);
 
-      return client
+      return client;
     } catch (error) {
       console.error('Error logging in:', error);
       throw new Error('Failed to login');
