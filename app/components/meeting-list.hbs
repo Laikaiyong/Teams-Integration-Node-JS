@@ -1,0 +1,16 @@
+<h2>
+    Meetings
+</h2>
+<ul>
+  {{#each this.meetings as |meeting|}}
+    <li>
+        {{meeting.subject}} - {{meeting.start.dateTime}}
+    </li>
+  {{/each}}
+</ul>
+<button {{on "click" this.getCalls}}>
+    Get Meetings
+</button>
+<button {{on "click" this.createMeeting}}>
+    Create New Meeting
+</button>

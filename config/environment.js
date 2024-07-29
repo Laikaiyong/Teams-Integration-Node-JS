@@ -14,6 +14,11 @@ module.exports = function (environment) {
       },
     },
 
+    microsoft: {
+      AZURE_CLIENT_ID: 'a4e700b4-31d5-4240-b074-89be1a095c9f',
+      AZURE_CLIENT_SECRET: '42a7396e-b8f6-427c-a365-b9b389c97e4e',
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
